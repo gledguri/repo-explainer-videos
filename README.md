@@ -3,6 +3,8 @@
 Personal studio: take the explainer video [GitDiagram](https://gitdiagram.com) made for one of my repos, tell
 Claude how the story should change, and get back a re-voiced, re-rendered MP4 with no watermark.
 
+**→ How I use it: [HOW-TO.md](HOW-TO.md)**
+
 GitDiagram's films are JSON shot plans played by its open-source (MIT) engine, so instead of editing pixels
 we edit the plan. The instructions for the LLM are in **[CLAUDE.md](CLAUDE.md)**; I just prompt, e.g.:
 
