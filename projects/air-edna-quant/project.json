@@ -1,0 +1,26 @@
+{
+  "repo": "gledguri/Air-eDNA-quant",
+  "meta": {
+    "owner": "gledguri",
+    "repo": "Air-eDNA-quant",
+    "url": "https://github.com/gledguri/air-edna-quant",
+    "description": "",
+    "stars": 0,
+    "language": "TeX"
+  },
+  "voice": {
+    "provider": "original"
+  },
+  "brand": {
+    "chip": true,
+    "chipText": "",
+    "glyph": "repo",
+    "endLink": "",
+    "signoff": ""
+  },
+  "captions": true,
+  "render": {
+    "fps": 30,
+    "height": 1080
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "repo-explainer-videos",
+  "private": true,
+  "type": "module",
+  "description": "Personal studio for re-directing GitDiagram explainer videos with an LLM and re-rendering them without the watermark.",
+  "scripts": {
+    "vid": "tsx scripts/vid.mjs"
+  },
+  "dependencies": {
+    "puppeteer": "24.10.0",
+    "tsx": "4.19.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

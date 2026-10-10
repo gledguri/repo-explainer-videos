@@ -1,0 +1,1154 @@
+{
+  "title": "Quantitative Multispecies eDNA",
+  "outro": "One qPCR anchor, thirteen species mapped.",
+  "beats": [
+    {
+      "scene": "1",
+      "narration": "A bottle of seawater holds DNA from dozens of fish,",
+      "transition": "zoom",
+      "elements": [
+        {
+          "id": "seahead",
+          "kind": "heading",
+          "at": "bottle",
+          "x": 2.63,
+          "y": 1.35,
+          "w": 4.8,
+          "h": 1.86,
+          "text": "One bottle of *seawater*"
+        },
+        {
+          "id": "chip_hake",
+          "kind": "chip",
+          "at": "fish",
+          "x": 2.63,
+          "y": 3.68,
+          "w": 1.13,
+          "h": 0.64,
+          "text": "Hake",
+          "tone": "soft"
+        },
+        {
+          "id": "chip_two",
+          "kind": "chip",
+          "at": "fish",
+          "x": 4.38,
+          "y": 3.68,
+          "w": 1.94,
+          "h": 0.64,
+          "text": "Species 2",
+          "tone": "soft"
+        },
+        {
+          "id": "chip_more",
+          "kind": "chip",
+          "at": "fish",
+          "x": 6.95,
+          "y": 3.68,
+          "w": 2.27,
+          "h": 0.64,
+          "text": "Dozens more",
+          "tone": "soft"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "scene": "1",
+      "narration": "but sequencing only tells you proportions, never how much.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "bars",
+          "kind": "bars",
+          "at": "proportions",
+          "x": 2.63,
+          "y": 4.8,
+          "w": 6.88,
+          "h": 2.35,
+          "items": [
+            {
+              "label": "Hake",
+              "value": 38
+            },
+            {
+              "label": "Species 2",
+              "value": 27
+            },
+            {
+              "label": "Other species",
+              "value": 35
+            }
+          ],
+          "unit": "share…"
+        },
+        {
+          "id": "stamp",
+          "kind": "stamp",
+          "at": "never",
+          "x": 10.13,
+          "y": 5.58,
+          "w": 3.24,
+          "h": 0.8,
+          "text": "NO AMOUNTS",
+          "tone": "bad"
+        }
+      ],
+      "actions": [
+        {
+          "do": "shake",
+          "at": "never",
+          "target": [
+            "bars"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "2",
+      "narration": "That's the gap this project closes.",
+      "transition": "slide",
+      "elements": [
+        {
+          "id": "title",
+          "kind": "heading",
+          "at": "",
+          "x": 3.43,
+          "y": 1.37,
+          "w": 8.28,
+          "h": 2.48,
+          "text": "Quantitative *Multispecies* eDNA"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "scene": "2",
+      "narration": "It's a reproducible research pipeline that joins two kinds of evidence:",
+      "transition": "",
+      "elements": [
+        {
+          "id": "qpcr",
+          "kind": "box",
+          "at": "evidence",
+          "x": 3.43,
+          "y": 4.35,
+          "w": 3.81,
+          "h": 1.41,
+          "label": "qPCR",
+          "sub": "absolute amounts",
+          "icon": "bolt",
+          "tone": "plain"
+        },
+        {
+          "id": "meta",
+          "kind": "box",
+          "at": "evidence",
+          "x": 8.32,
+          "y": 4.35,
+          "w": 3.81,
+          "h": 1.41,
+          "label": "Metabarcoding",
+          "sub": "species reads",
+          "icon": "database",
+          "tone": "plain"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "scene": "2",
+      "narration": "qPCR, which measures the absolute amount of one reference species, hake,",
+      "transition": "",
+      "elements": [
+        {
+          "id": "hake",
+          "kind": "chip",
+          "at": "hake",
+          "x": 3.55,
+          "y": 6.26,
+          "w": 3.58,
+          "h": 0.87,
+          "text": "hake: absolute",
+          "tone": "soft"
+        }
+      ],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "qpcr",
+          "target": [
+            "qpcr"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "2",
+      "narration": "and metabarcoding, which reads every species at once but only as shares.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "shares",
+          "kind": "chip",
+          "at": "shares",
+          "x": 7.89,
+          "y": 6.26,
+          "w": 4.68,
+          "h": 0.87,
+          "text": "all species: shares",
+          "tone": "soft"
+        }
+      ],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "metabarcoding",
+          "target": [
+            "meta"
+          ]
+        },
+        {
+          "do": "dim",
+          "at": "metabarcoding",
+          "target": [
+            "qpcr"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "3",
+      "narration": "Feed both into one joint statistical model,",
+      "transition": "push",
+      "elements": [
+        {
+          "id": "qpcr",
+          "kind": "box",
+          "at": "both",
+          "x": 2.89,
+          "y": 1.35,
+          "w": 4.79,
+          "h": 1.33,
+          "label": "qPCR",
+          "sub": "hake, absolute amount",
+          "icon": "bolt",
+          "tone": "plain"
+        },
+        {
+          "id": "meta",
+          "kind": "box",
+          "at": "both",
+          "x": 8.32,
+          "y": 1.35,
+          "w": 4.79,
+          "h": 1.33,
+          "label": "Metabarcoding",
+          "sub": "all species, as shares",
+          "icon": "database",
+          "tone": "plain"
+        },
+        {
+          "id": "joint",
+          "kind": "box",
+          "at": "joint",
+          "x": 5.61,
+          "y": 3.58,
+          "w": 4.79,
+          "h": 1.33,
+          "label": "Joint model",
+          "sub": "fitted in Stan",
+          "icon": "cpu",
+          "tone": "accent"
+        },
+        {
+          "id": "a1",
+          "kind": "arrow",
+          "at": "model",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "qpcr",
+          "to": "joint",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        },
+        {
+          "id": "a2",
+          "kind": "arrow",
+          "at": "model",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "meta",
+          "to": "joint",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "one",
+          "target": [
+            "joint"
+          ]
+        },
+        {
+          "do": "flow",
+          "at": "model",
+          "target": [
+            "a1"
+          ]
+        },
+        {
+          "do": "flow",
+          "at": "model",
+          "target": [
+            "a2"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "3",
+      "narration": "and the shares turn into estimated DNA concentrations for every species.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "out",
+          "kind": "box",
+          "at": "concentrations",
+          "x": 5.61,
+          "y": 5.82,
+          "w": 4.79,
+          "h": 1.33,
+          "label": "Log_D_est.rds",
+          "sub": "DNA concentrations per species",
+          "icon": "file",
+          "tone": "ok"
+        },
+        {
+          "id": "a3",
+          "kind": "arrow",
+          "at": "turn",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "joint",
+          "to": "out",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "shares",
+          "target": [
+            "meta"
+          ]
+        },
+        {
+          "do": "flow",
+          "at": "turn",
+          "target": [
+            "a3"
+          ]
+        },
+        {
+          "do": "highlight",
+          "at": "species",
+          "target": [
+            "out"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "4",
+      "narration": "From there, spatial smooths spread those estimates across the survey area,",
+      "transition": "slide",
+      "elements": [
+        {
+          "id": "conc",
+          "kind": "box",
+          "at": "from",
+          "x": 1.28,
+          "y": 3.78,
+          "w": 2.64,
+          "h": 0.94,
+          "label": "Log_D_est.rds",
+          "sub": "",
+          "icon": "file",
+          "tone": "plain"
+        },
+        {
+          "id": "smooth",
+          "kind": "box",
+          "at": "spatial",
+          "x": 4.88,
+          "y": 3.78,
+          "w": 2.64,
+          "h": 0.94,
+          "label": "sdmTMB smooths",
+          "sub": "",
+          "icon": "gear",
+          "tone": "plain"
+        },
+        {
+          "id": "a1",
+          "kind": "arrow",
+          "at": "spread",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "conc",
+          "to": "smooth",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        },
+        {
+          "id": "maps",
+          "kind": "box",
+          "at": "area",
+          "x": 8.48,
+          "y": 4.27,
+          "w": 2.64,
+          "h": 0.94,
+          "label": "Survey maps",
+          "sub": "",
+          "icon": "globe",
+          "tone": "accent"
+        },
+        {
+          "id": "a2",
+          "kind": "arrow",
+          "at": "area",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "smooth",
+          "to": "maps",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "estimates",
+          "target": [
+            "conc"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "4",
+      "narration": "so you get maps with uncertainty,",
+      "transition": "",
+      "elements": [
+        {
+          "id": "se",
+          "kind": "chip",
+          "at": "uncertainty",
+          "x": 8.49,
+          "y": 3.29,
+          "w": 2.63,
+          "h": 0.56,
+          "text": "all_maps_se.rds",
+          "tone": "soft"
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "maps",
+          "target": [
+            "maps"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "4",
+      "narration": "and finally every figure in the manuscript.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "figs",
+          "kind": "box",
+          "at": "every",
+          "x": 12.08,
+          "y": 3.78,
+          "w": 2.64,
+          "h": 0.94,
+          "label": "plots/",
+          "sub": "",
+          "icon": "folder",
+          "tone": "ok"
+        },
+        {
+          "id": "a3",
+          "kind": "arrow",
+          "at": "every",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "maps",
+          "to": "figs",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "manuscript",
+          "target": [
+            "figs"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "5",
+      "narration": "Reproducing it starts with one script.",
+      "transition": "push",
+      "elements": [
+        {
+          "id": "term",
+          "kind": "terminal",
+          "at": "",
+          "x": 1.96,
+          "y": 2.56,
+          "w": 12.08,
+          "h": 2.01,
+          "title": "Quantitative-Multispecies-eDNA",
+          "lines": [
+            "$ git clone https://github.com/gledguri/quantitative-multispecies-edna",
+            "Cloning into 'quantitative-multispecies-edna'..."
+          ]
+        },
+        {
+          "id": "zero",
+          "kind": "chip",
+          "at": "script",
+          "x": 2.85,
+          "y": 5.07,
+          "w": 5.35,
+          "h": 0.87,
+          "text": "code/0_Download_data.R",
+          "tone": "accent"
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "script",
+          "target": [
+            "zero"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "5",
+      "narration": "You clone the repository, open the R project, and run the zero file.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "proj",
+          "kind": "chip",
+          "at": "open",
+          "x": 9.35,
+          "y": 5.07,
+          "w": 3.8,
+          "h": 0.87,
+          "text": "RStudio project",
+          "tone": "soft"
+        },
+        {
+          "id": "run",
+          "kind": "arrow",
+          "at": "run",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "proj",
+          "to": "zero",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        }
+      ],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "clone",
+          "target": [
+            "term"
+          ],
+          "lines": [
+            1
+          ]
+        },
+        {
+          "do": "pulse",
+          "at": "open",
+          "target": [
+            "proj"
+          ]
+        },
+        {
+          "do": "type",
+          "at": "run",
+          "target": [
+            "term"
+          ],
+          "line": "$ Rscript code/0_Download_data.R"
+        },
+        {
+          "do": "highlight",
+          "at": "zero",
+          "target": [
+            "zero"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "6",
+      "narration": "It pulls the data archive from Zenodo,",
+      "transition": "slide",
+      "elements": [
+        {
+          "id": "zen",
+          "kind": "box",
+          "at": "zenodo",
+          "x": 3.43,
+          "y": 2.59,
+          "w": 3.99,
+          "h": 1.41,
+          "label": "Zenodo",
+          "sub": "Data.zip",
+          "icon": "cloud",
+          "tone": "plain"
+        },
+        {
+          "id": "inter",
+          "kind": "box",
+          "at": "data",
+          "x": 8.57,
+          "y": 2.59,
+          "w": 3.99,
+          "h": 1.41,
+          "label": "data/",
+          "sub": "and Intermediate_data/",
+          "icon": "folder",
+          "tone": "soft"
+        },
+        {
+          "id": "a1",
+          "kind": "arrow",
+          "at": "pulls",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "zen",
+          "to": "inter",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "zenodo",
+          "target": [
+            "zen"
+          ]
+        },
+        {
+          "do": "highlight",
+          "at": "data",
+          "target": [
+            "inter"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "6",
+      "narration": "fetches the raw reads from the sequence archive,",
+      "transition": "",
+      "elements": [
+        {
+          "id": "sra",
+          "kind": "box",
+          "at": "sequence",
+          "x": 3.43,
+          "y": 4.5,
+          "w": 3.99,
+          "h": 1.41,
+          "label": "NCBI SRA",
+          "sub": "PRJNA1426049",
+          "icon": "database",
+          "tone": "accent"
+        },
+        {
+          "id": "fastq",
+          "kind": "box",
+          "at": "reads",
+          "x": 8.57,
+          "y": 4.5,
+          "w": 3.99,
+          "h": 1.41,
+          "label": "SRA/fastq/",
+          "sub": "one FASTQ file per run",
+          "icon": "folder",
+          "tone": "soft"
+        },
+        {
+          "id": "a2",
+          "kind": "arrow",
+          "at": "fetches",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "sra",
+          "to": "fastq",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "sequence",
+          "target": [
+            "sra"
+          ]
+        },
+        {
+          "do": "highlight",
+          "at": "reads",
+          "target": [
+            "fastq"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "6",
+      "narration": "and stitches them into one combined file.",
+      "transition": "",
+      "elements": [],
+      "actions": []
+    },
+    {
+      "scene": "7",
+      "narration": "Then three notebooks run in order.",
+      "transition": "slide",
+      "elements": [
+        {
+          "id": "runs",
+          "kind": "tree",
+          "at": "notebooks",
+          "x": 3.07,
+          "y": 3.36,
+          "w": 5.2,
+          "h": 1.78,
+          "paths": [
+            "code/1_Run_QM_qPCR.qmd",
+            "code/2_sdmTMB_smooths_13sp.qmd",
+            "code/3_All_Figures.qmd"
+          ],
+          "focus": []
+        }
+      ],
+      "actions": [
+        {
+          "do": "scan",
+          "at": "order",
+          "target": [
+            "runs"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "7",
+      "narration": "The first fits the joint model in Stan, alongside a mock community calibration that learns how each species amplifies.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "joint_chip",
+          "kind": "chip",
+          "at": "stan",
+          "x": 8.92,
+          "y": 3.13,
+          "w": 4.02,
+          "h": 0.87,
+          "text": "Joint_model.stan",
+          "tone": "accent"
+        },
+        {
+          "id": "mock_chip",
+          "kind": "chip",
+          "at": "mock",
+          "x": 9.03,
+          "y": 4.5,
+          "w": 3.8,
+          "h": 0.87,
+          "text": "Mock_model.stan",
+          "tone": "soft"
+        }
+      ],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "first",
+          "target": [
+            "runs"
+          ],
+          "rows": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "7",
+      "narration": "The second fits the spatial smooths.",
+      "transition": "",
+      "elements": [],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "second",
+          "target": [
+            "runs"
+          ],
+          "rows": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "7",
+      "narration": "The third draws the figures.",
+      "transition": "",
+      "elements": [],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "third",
+          "target": [
+            "runs"
+          ],
+          "rows": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "8",
+      "narration": "And because each stage caches its outputs,",
+      "transition": "push",
+      "elements": [],
+      "actions": []
+    },
+    {
+      "scene": "8",
+      "narration": "you can skip the expensive model fitting and jump straight to the maps.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "model",
+          "kind": "box",
+          "at": "expensive",
+          "x": 3.42,
+          "y": 3.55,
+          "w": 4.25,
+          "h": 1.41,
+          "label": "Joint model",
+          "sub": "Stan fit, run once",
+          "icon": "gear",
+          "tone": "plain"
+        },
+        {
+          "id": "maps",
+          "kind": "box",
+          "at": "maps",
+          "x": 8.32,
+          "y": 3.55,
+          "w": 4.25,
+          "h": 1.41,
+          "label": "Maps",
+          "sub": "smooths with uncertainty",
+          "icon": "globe",
+          "tone": "ok"
+        }
+      ],
+      "actions": [
+        {
+          "do": "strike",
+          "at": "expensive",
+          "target": [
+            "model"
+          ]
+        },
+        {
+          "do": "pulse",
+          "at": "maps",
+          "target": [
+            "maps"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "9",
+      "narration": "The downloader even remembers what failed, so a broken run retries alone.",
+      "transition": "push",
+      "elements": [
+        {
+          "id": "code",
+          "kind": "code",
+          "at": "downloader",
+          "x": 3.42,
+          "y": 2.27,
+          "w": 9.17,
+          "h": 2.6,
+          "title": "code/sra_python/download_sra.py",
+          "lines": [
+            "if failed:",
+            "    fail_log = METADATA_DIR / \"failed_runs.txt\"",
+            "    fail_log.write_text(\"\\n\".join(failed))",
+            "    print(f\"  Retry list : {fail_log}\")"
+          ],
+          "focus": []
+        },
+        {
+          "id": "retry",
+          "kind": "chip",
+          "at": "retries",
+          "x": 5.11,
+          "y": 5.36,
+          "w": 5.79,
+          "h": 0.87,
+          "text": "retries failed runs only",
+          "tone": "ok"
+        }
+      ],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "remembers",
+          "target": [
+            "code"
+          ],
+          "lines": [
+            2,
+            3
+          ]
+        },
+        {
+          "do": "highlight",
+          "at": "failed",
+          "target": [
+            "code"
+          ],
+          "lines": [
+            3
+          ]
+        },
+        {
+          "do": "pulse",
+          "at": "alone",
+          "target": [
+            "retry"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "10",
+      "narration": "One known species, measured exactly, ends up anchoring the whole ocean's count.",
+      "transition": "zoom",
+      "elements": [
+        {
+          "id": "hake",
+          "kind": "box",
+          "at": "one",
+          "x": 4.5,
+          "y": 3.55,
+          "w": 3.38,
+          "h": 1.41,
+          "label": "Hake",
+          "sub": "measured exactly",
+          "icon": "none",
+          "tone": "accent"
+        },
+        {
+          "id": "s2",
+          "kind": "chip",
+          "at": "ends",
+          "x": 9.03,
+          "y": 1.77,
+          "w": 2.47,
+          "h": 0.87,
+          "text": "species 2",
+          "tone": "soft"
+        },
+        {
+          "id": "s3",
+          "kind": "chip",
+          "at": "ends",
+          "x": 9.03,
+          "y": 3.13,
+          "w": 2.47,
+          "h": 0.87,
+          "text": "species 3",
+          "tone": "soft"
+        },
+        {
+          "id": "s4",
+          "kind": "chip",
+          "at": "ends",
+          "x": 9.03,
+          "y": 4.5,
+          "w": 2.47,
+          "h": 0.87,
+          "text": "species 4",
+          "tone": "soft"
+        },
+        {
+          "id": "s5",
+          "kind": "chip",
+          "at": "ends",
+          "x": 9.03,
+          "y": 5.87,
+          "w": 2.47,
+          "h": 0.87,
+          "text": "species 5",
+          "tone": "soft"
+        },
+        {
+          "id": "a2",
+          "kind": "arrow",
+          "at": "anchoring",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "hake",
+          "to": "s2",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        },
+        {
+          "id": "a3",
+          "kind": "arrow",
+          "at": "anchoring",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "hake",
+          "to": "s3",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        },
+        {
+          "id": "a4",
+          "kind": "arrow",
+          "at": "anchoring",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "hake",
+          "to": "s4",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        },
+        {
+          "id": "a5",
+          "kind": "arrow",
+          "at": "anchoring",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "hake",
+          "to": "s5",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        }
+      ],
+      "actions": [
+        {
+          "do": "focus",
+          "at": "exactly",
+          "target": [
+            "hake"
+          ]
+        },
+        {
+          "do": "flow",
+          "at": "anchoring",
+          "target": [
+            "a2"
+          ]
+        },
+        {
+          "do": "flow",
+          "at": "anchoring",
+          "target": [
+            "a3"
+          ]
+        },
+        {
+          "do": "flow",
+          "at": "anchoring",
+          "target": [
+            "a4"
+          ]
+        },
+        {
+          "do": "pulse",
+          "at": "whole",
+          "target": [
+            "hake"
+          ]
+        }
+      ]
+    }
+  ]
+}

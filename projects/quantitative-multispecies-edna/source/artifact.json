@@ -1,0 +1,2460 @@
+{
+  "version": 2,
+  "repository": "gledguri/quantitative-multispecies-edna",
+  "createdAt": "2026-10-09T19:12:33.445Z",
+  "meta": {
+    "owner": "gledguri",
+    "repo": "quantitative-multispecies-edna",
+    "url": "https://github.com/gledguri/quantitative-multispecies-edna",
+    "description": "",
+    "stars": 0,
+    "language": "R"
+  },
+  "plan": {
+    "title": "Quantitative Multispecies eDNA",
+    "outro": "One qPCR anchor, thirteen species mapped.",
+    "beats": [
+      {
+        "scene": "1",
+        "narration": "A bottle of seawater holds DNA from dozens of fish,",
+        "transition": "zoom",
+        "elements": [
+          {
+            "id": "seahead",
+            "kind": "heading",
+            "at": "bottle",
+            "x": 2.63,
+            "y": 1.35,
+            "w": 4.8,
+            "h": 1.86,
+            "text": "One bottle of *seawater*"
+          },
+          {
+            "id": "chip_hake",
+            "kind": "chip",
+            "at": "fish",
+            "x": 2.63,
+            "y": 3.68,
+            "w": 1.13,
+            "h": 0.64,
+            "text": "Hake",
+            "tone": "soft"
+          },
+          {
+            "id": "chip_two",
+            "kind": "chip",
+            "at": "fish",
+            "x": 4.38,
+            "y": 3.68,
+            "w": 1.94,
+            "h": 0.64,
+            "text": "Species 2",
+            "tone": "soft"
+          },
+          {
+            "id": "chip_more",
+            "kind": "chip",
+            "at": "fish",
+            "x": 6.95,
+            "y": 3.68,
+            "w": 2.27,
+            "h": 0.64,
+            "text": "Dozens more",
+            "tone": "soft"
+          }
+        ],
+        "actions": []
+      },
+      {
+        "scene": "1",
+        "narration": "but sequencing only tells you proportions, never how much.",
+        "transition": "",
+        "elements": [
+          {
+            "id": "bars",
+            "kind": "bars",
+            "at": "proportions",
+            "x": 2.63,
+            "y": 4.8,
+            "w": 6.88,
+            "h": 2.35,
+            "items": [
+              {
+                "label": "Hake",
+                "value": 38
+              },
+              {
+                "label": "Species 2",
+                "value": 27
+              },
+              {
+                "label": "Other species",
+                "value": 35
+              }
+            ],
+            "unit": "share…"
+          },
+          {
+            "id": "stamp",
+            "kind": "stamp",
+            "at": "never",
+            "x": 10.13,
+            "y": 5.58,
+            "w": 3.24,
+            "h": 0.8,
+            "text": "NO AMOUNTS",
+            "tone": "bad"
+          }
+        ],
+        "actions": [
+          {
+            "do": "shake",
+            "at": "never",
+            "target": [
+              "bars"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "2",
+        "narration": "That's the gap this project closes.",
+        "transition": "slide",
+        "elements": [
+          {
+            "id": "title",
+            "kind": "heading",
+            "at": "",
+            "x": 3.43,
+            "y": 1.37,
+            "w": 8.28,
+            "h": 2.48,
+            "text": "Quantitative *Multispecies* eDNA"
+          }
+        ],
+        "actions": []
+      },
+      {
+        "scene": "2",
+        "narration": "It's a reproducible research pipeline that joins two kinds of evidence:",
+        "transition": "",
+        "elements": [
+          {
+            "id": "qpcr",
+            "kind": "box",
+            "at": "evidence",
+            "x": 3.43,
+            "y": 4.35,
+            "w": 3.81,
+            "h": 1.41,
+            "label": "qPCR",
+            "sub": "absolute amounts",
+            "icon": "bolt",
+            "tone": "plain"
+          },
+          {
+            "id": "meta",
+            "kind": "box",
+            "at": "evidence",
+            "x": 8.32,
+            "y": 4.35,
+            "w": 3.81,
+            "h": 1.41,
+            "label": "Metabarcoding",
+            "sub": "species reads",
+            "icon": "database",
+            "tone": "plain"
+          }
+        ],
+        "actions": []
+      },
+      {
+        "scene": "2",
+        "narration": "qPCR, which measures the absolute amount of one reference species, hake,",
+        "transition": "",
+        "elements": [
+          {
+            "id": "hake",
+            "kind": "chip",
+            "at": "hake",
+            "x": 3.55,
+            "y": 6.26,
+            "w": 3.58,
+            "h": 0.87,
+            "text": "hake: absolute",
+            "tone": "soft"
+          }
+        ],
+        "actions": [
+          {
+            "do": "highlight",
+            "at": "qpcr",
+            "target": [
+              "qpcr"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "2",
+        "narration": "and metabarcoding, which reads every species at once but only as shares.",
+        "transition": "",
+        "elements": [
+          {
+            "id": "shares",
+            "kind": "chip",
+            "at": "shares",
+            "x": 7.89,
+            "y": 6.26,
+            "w": 4.68,
+            "h": 0.87,
+            "text": "all species: shares",
+            "tone": "soft"
+          }
+        ],
+        "actions": [
+          {
+            "do": "highlight",
+            "at": "metabarcoding",
+            "target": [
+              "meta"
+            ]
+          },
+          {
+            "do": "dim",
+            "at": "metabarcoding",
+            "target": [
+              "qpcr"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "3",
+        "narration": "Feed both into one joint statistical model,",
+        "transition": "push",
+        "elements": [
+          {
+            "id": "qpcr",
+            "kind": "box",
+            "at": "both",
+            "x": 2.89,
+            "y": 1.35,
+            "w": 4.79,
+            "h": 1.33,
+            "label": "qPCR",
+            "sub": "hake, absolute amount",
+            "icon": "bolt",
+            "tone": "plain"
+          },
+          {
+            "id": "meta",
+            "kind": "box",
+            "at": "both",
+            "x": 8.32,
+            "y": 1.35,
+            "w": 4.79,
+            "h": 1.33,
+            "label": "Metabarcoding",
+            "sub": "all species, as shares",
+            "icon": "database",
+            "tone": "plain"
+          },
+          {
+            "id": "joint",
+            "kind": "box",
+            "at": "joint",
+            "x": 5.61,
+            "y": 3.58,
+            "w": 4.79,
+            "h": 1.33,
+            "label": "Joint model",
+            "sub": "fitted in Stan",
+            "icon": "cpu",
+            "tone": "accent"
+          },
+          {
+            "id": "a1",
+            "kind": "arrow",
+            "at": "model",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "qpcr",
+            "to": "joint",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          },
+          {
+            "id": "a2",
+            "kind": "arrow",
+            "at": "model",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "meta",
+            "to": "joint",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          }
+        ],
+        "actions": [
+          {
+            "do": "pulse",
+            "at": "one",
+            "target": [
+              "joint"
+            ]
+          },
+          {
+            "do": "flow",
+            "at": "model",
+            "target": [
+              "a1"
+            ]
+          },
+          {
+            "do": "flow",
+            "at": "model",
+            "target": [
+              "a2"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "3",
+        "narration": "and the shares turn into estimated DNA concentrations for every species.",
+        "transition": "",
+        "elements": [
+          {
+            "id": "out",
+            "kind": "box",
+            "at": "concentrations",
+            "x": 5.61,
+            "y": 5.82,
+            "w": 4.79,
+            "h": 1.33,
+            "label": "Log_D_est.rds",
+            "sub": "DNA concentrations per species",
+            "icon": "file",
+            "tone": "ok"
+          },
+          {
+            "id": "a3",
+            "kind": "arrow",
+            "at": "turn",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "joint",
+            "to": "out",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          }
+        ],
+        "actions": [
+          {
+            "do": "pulse",
+            "at": "shares",
+            "target": [
+              "meta"
+            ]
+          },
+          {
+            "do": "flow",
+            "at": "turn",
+            "target": [
+              "a3"
+            ]
+          },
+          {
+            "do": "highlight",
+            "at": "species",
+            "target": [
+              "out"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "4",
+        "narration": "From there, spatial smooths spread those estimates across the survey area,",
+        "transition": "slide",
+        "elements": [
+          {
+            "id": "conc",
+            "kind": "box",
+            "at": "from",
+            "x": 1.28,
+            "y": 3.78,
+            "w": 2.64,
+            "h": 0.94,
+            "label": "Log_D_est.rds",
+            "sub": "",
+            "icon": "file",
+            "tone": "plain"
+          },
+          {
+            "id": "smooth",
+            "kind": "box",
+            "at": "spatial",
+            "x": 4.88,
+            "y": 3.78,
+            "w": 2.64,
+            "h": 0.94,
+            "label": "sdmTMB smooths",
+            "sub": "",
+            "icon": "gear",
+            "tone": "plain"
+          },
+          {
+            "id": "a1",
+            "kind": "arrow",
+            "at": "spread",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "conc",
+            "to": "smooth",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          },
+          {
+            "id": "maps",
+            "kind": "box",
+            "at": "area",
+            "x": 8.48,
+            "y": 4.27,
+            "w": 2.64,
+            "h": 0.94,
+            "label": "Survey maps",
+            "sub": "",
+            "icon": "globe",
+            "tone": "accent"
+          },
+          {
+            "id": "a2",
+            "kind": "arrow",
+            "at": "area",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "smooth",
+            "to": "maps",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          }
+        ],
+        "actions": [
+          {
+            "do": "pulse",
+            "at": "estimates",
+            "target": [
+              "conc"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "4",
+        "narration": "so you get maps with uncertainty,",
+        "transition": "",
+        "elements": [
+          {
+            "id": "se",
+            "kind": "chip",
+            "at": "uncertainty",
+            "x": 8.49,
+            "y": 3.29,
+            "w": 2.63,
+            "h": 0.56,
+            "text": "all_maps_se.rds",
+            "tone": "soft"
+          }
+        ],
+        "actions": [
+          {
+            "do": "pulse",
+            "at": "maps",
+            "target": [
+              "maps"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "4",
+        "narration": "and finally every figure in the manuscript.",
+        "transition": "",
+        "elements": [
+          {
+            "id": "figs",
+            "kind": "box",
+            "at": "every",
+            "x": 12.08,
+            "y": 3.78,
+            "w": 2.64,
+            "h": 0.94,
+            "label": "plots/",
+            "sub": "",
+            "icon": "folder",
+            "tone": "ok"
+          },
+          {
+            "id": "a3",
+            "kind": "arrow",
+            "at": "every",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "maps",
+            "to": "figs",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          }
+        ],
+        "actions": [
+          {
+            "do": "pulse",
+            "at": "manuscript",
+            "target": [
+              "figs"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "5",
+        "narration": "Reproducing it starts with one script.",
+        "transition": "push",
+        "elements": [
+          {
+            "id": "term",
+            "kind": "terminal",
+            "at": "",
+            "x": 1.96,
+            "y": 2.56,
+            "w": 12.08,
+            "h": 2.01,
+            "title": "Quantitative-Multispecies-eDNA",
+            "lines": [
+              "$ git clone https://github.com/gledguri/quantitative-multispecies-edna",
+              "Cloning into 'quantitative-multispecies-edna'..."
+            ]
+          },
+          {
+            "id": "zero",
+            "kind": "chip",
+            "at": "script",
+            "x": 2.85,
+            "y": 5.07,
+            "w": 5.35,
+            "h": 0.87,
+            "text": "code/0_Download_data.R",
+            "tone": "accent"
+          }
+        ],
+        "actions": [
+          {
+            "do": "pulse",
+            "at": "script",
+            "target": [
+              "zero"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "5",
+        "narration": "You clone the repository, open the R project, and run the zero file.",
+        "transition": "",
+        "elements": [
+          {
+            "id": "proj",
+            "kind": "chip",
+            "at": "open",
+            "x": 9.35,
+            "y": 5.07,
+            "w": 3.8,
+            "h": 0.87,
+            "text": "RStudio project",
+            "tone": "soft"
+          },
+          {
+            "id": "run",
+            "kind": "arrow",
+            "at": "run",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "proj",
+            "to": "zero",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          }
+        ],
+        "actions": [
+          {
+            "do": "highlight",
+            "at": "clone",
+            "target": [
+              "term"
+            ],
+            "lines": [
+              1
+            ]
+          },
+          {
+            "do": "pulse",
+            "at": "open",
+            "target": [
+              "proj"
+            ]
+          },
+          {
+            "do": "type",
+            "at": "run",
+            "target": [
+              "term"
+            ],
+            "line": "$ Rscript code/0_Download_data.R"
+          },
+          {
+            "do": "highlight",
+            "at": "zero",
+            "target": [
+              "zero"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "6",
+        "narration": "It pulls the data archive from Zenodo,",
+        "transition": "slide",
+        "elements": [
+          {
+            "id": "zen",
+            "kind": "box",
+            "at": "zenodo",
+            "x": 3.43,
+            "y": 2.59,
+            "w": 3.99,
+            "h": 1.41,
+            "label": "Zenodo",
+            "sub": "Data.zip",
+            "icon": "cloud",
+            "tone": "plain"
+          },
+          {
+            "id": "inter",
+            "kind": "box",
+            "at": "data",
+            "x": 8.57,
+            "y": 2.59,
+            "w": 3.99,
+            "h": 1.41,
+            "label": "data/",
+            "sub": "and Intermediate_data/",
+            "icon": "folder",
+            "tone": "soft"
+          },
+          {
+            "id": "a1",
+            "kind": "arrow",
+            "at": "pulls",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "zen",
+            "to": "inter",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          }
+        ],
+        "actions": [
+          {
+            "do": "pulse",
+            "at": "zenodo",
+            "target": [
+              "zen"
+            ]
+          },
+          {
+            "do": "highlight",
+            "at": "data",
+            "target": [
+              "inter"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "6",
+        "narration": "fetches the raw reads from the sequence archive,",
+        "transition": "",
+        "elements": [
+          {
+            "id": "sra",
+            "kind": "box",
+            "at": "sequence",
+            "x": 3.43,
+            "y": 4.5,
+            "w": 3.99,
+            "h": 1.41,
+            "label": "NCBI SRA",
+            "sub": "PRJNA1426049",
+            "icon": "database",
+            "tone": "accent"
+          },
+          {
+            "id": "fastq",
+            "kind": "box",
+            "at": "reads",
+            "x": 8.57,
+            "y": 4.5,
+            "w": 3.99,
+            "h": 1.41,
+            "label": "SRA/fastq/",
+            "sub": "one FASTQ file per run",
+            "icon": "folder",
+            "tone": "soft"
+          },
+          {
+            "id": "a2",
+            "kind": "arrow",
+            "at": "fetches",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "sra",
+            "to": "fastq",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          }
+        ],
+        "actions": [
+          {
+            "do": "pulse",
+            "at": "sequence",
+            "target": [
+              "sra"
+            ]
+          },
+          {
+            "do": "highlight",
+            "at": "reads",
+            "target": [
+              "fastq"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "6",
+        "narration": "and stitches them into one combined file.",
+        "transition": "",
+        "elements": [],
+        "actions": []
+      },
+      {
+        "scene": "7",
+        "narration": "Then three notebooks run in order.",
+        "transition": "slide",
+        "elements": [
+          {
+            "id": "runs",
+            "kind": "tree",
+            "at": "notebooks",
+            "x": 3.07,
+            "y": 3.36,
+            "w": 5.2,
+            "h": 1.78,
+            "paths": [
+              "code/1_Run_QM_qPCR.qmd",
+              "code/2_sdmTMB_smooths_13sp.qmd",
+              "code/3_All_Figures.qmd"
+            ],
+            "focus": []
+          }
+        ],
+        "actions": [
+          {
+            "do": "scan",
+            "at": "order",
+            "target": [
+              "runs"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "7",
+        "narration": "The first fits the joint model in Stan, alongside a mock community calibration that learns how each species amplifies.",
+        "transition": "",
+        "elements": [
+          {
+            "id": "joint_chip",
+            "kind": "chip",
+            "at": "stan",
+            "x": 8.92,
+            "y": 3.13,
+            "w": 4.02,
+            "h": 0.87,
+            "text": "Joint_model.stan",
+            "tone": "accent"
+          },
+          {
+            "id": "mock_chip",
+            "kind": "chip",
+            "at": "mock",
+            "x": 9.03,
+            "y": 4.5,
+            "w": 3.8,
+            "h": 0.87,
+            "text": "Mock_model.stan",
+            "tone": "soft"
+          }
+        ],
+        "actions": [
+          {
+            "do": "highlight",
+            "at": "first",
+            "target": [
+              "runs"
+            ],
+            "rows": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "7",
+        "narration": "The second fits the spatial smooths.",
+        "transition": "",
+        "elements": [],
+        "actions": [
+          {
+            "do": "highlight",
+            "at": "second",
+            "target": [
+              "runs"
+            ],
+            "rows": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "7",
+        "narration": "The third draws the figures.",
+        "transition": "",
+        "elements": [],
+        "actions": [
+          {
+            "do": "highlight",
+            "at": "third",
+            "target": [
+              "runs"
+            ],
+            "rows": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "8",
+        "narration": "And because each stage caches its outputs,",
+        "transition": "push",
+        "elements": [],
+        "actions": []
+      },
+      {
+        "scene": "8",
+        "narration": "you can skip the expensive model fitting and jump straight to the maps.",
+        "transition": "",
+        "elements": [
+          {
+            "id": "model",
+            "kind": "box",
+            "at": "expensive",
+            "x": 3.42,
+            "y": 3.55,
+            "w": 4.25,
+            "h": 1.41,
+            "label": "Joint model",
+            "sub": "Stan fit, run once",
+            "icon": "gear",
+            "tone": "plain"
+          },
+          {
+            "id": "maps",
+            "kind": "box",
+            "at": "maps",
+            "x": 8.32,
+            "y": 3.55,
+            "w": 4.25,
+            "h": 1.41,
+            "label": "Maps",
+            "sub": "smooths with uncertainty",
+            "icon": "globe",
+            "tone": "ok"
+          }
+        ],
+        "actions": [
+          {
+            "do": "strike",
+            "at": "expensive",
+            "target": [
+              "model"
+            ]
+          },
+          {
+            "do": "pulse",
+            "at": "maps",
+            "target": [
+              "maps"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "9",
+        "narration": "The downloader even remembers what failed, so a broken run retries alone.",
+        "transition": "push",
+        "elements": [
+          {
+            "id": "code",
+            "kind": "code",
+            "at": "downloader",
+            "x": 3.42,
+            "y": 2.27,
+            "w": 9.17,
+            "h": 2.6,
+            "title": "code/sra_python/download_sra.py",
+            "lines": [
+              "if failed:",
+              "    fail_log = METADATA_DIR / \"failed_runs.txt\"",
+              "    fail_log.write_text(\"\\n\".join(failed))",
+              "    print(f\"  Retry list : {fail_log}\")"
+            ],
+            "focus": []
+          },
+          {
+            "id": "retry",
+            "kind": "chip",
+            "at": "retries",
+            "x": 5.11,
+            "y": 5.36,
+            "w": 5.79,
+            "h": 0.87,
+            "text": "retries failed runs only",
+            "tone": "ok"
+          }
+        ],
+        "actions": [
+          {
+            "do": "highlight",
+            "at": "remembers",
+            "target": [
+              "code"
+            ],
+            "lines": [
+              2,
+              3
+            ]
+          },
+          {
+            "do": "highlight",
+            "at": "failed",
+            "target": [
+              "code"
+            ],
+            "lines": [
+              3
+            ]
+          },
+          {
+            "do": "pulse",
+            "at": "alone",
+            "target": [
+              "retry"
+            ]
+          }
+        ]
+      },
+      {
+        "scene": "10",
+        "narration": "One known species, measured exactly, ends up anchoring the whole ocean's count.",
+        "transition": "zoom",
+        "elements": [
+          {
+            "id": "hake",
+            "kind": "box",
+            "at": "one",
+            "x": 4.5,
+            "y": 3.55,
+            "w": 3.38,
+            "h": 1.41,
+            "label": "Hake",
+            "sub": "measured exactly",
+            "icon": "none",
+            "tone": "accent"
+          },
+          {
+            "id": "s2",
+            "kind": "chip",
+            "at": "ends",
+            "x": 9.03,
+            "y": 1.77,
+            "w": 2.47,
+            "h": 0.87,
+            "text": "species 2",
+            "tone": "soft"
+          },
+          {
+            "id": "s3",
+            "kind": "chip",
+            "at": "ends",
+            "x": 9.03,
+            "y": 3.13,
+            "w": 2.47,
+            "h": 0.87,
+            "text": "species 3",
+            "tone": "soft"
+          },
+          {
+            "id": "s4",
+            "kind": "chip",
+            "at": "ends",
+            "x": 9.03,
+            "y": 4.5,
+            "w": 2.47,
+            "h": 0.87,
+            "text": "species 4",
+            "tone": "soft"
+          },
+          {
+            "id": "s5",
+            "kind": "chip",
+            "at": "ends",
+            "x": 9.03,
+            "y": 5.87,
+            "w": 2.47,
+            "h": 0.87,
+            "text": "species 5",
+            "tone": "soft"
+          },
+          {
+            "id": "a2",
+            "kind": "arrow",
+            "at": "anchoring",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "hake",
+            "to": "s2",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          },
+          {
+            "id": "a3",
+            "kind": "arrow",
+            "at": "anchoring",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "hake",
+            "to": "s3",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          },
+          {
+            "id": "a4",
+            "kind": "arrow",
+            "at": "anchoring",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "hake",
+            "to": "s4",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          },
+          {
+            "id": "a5",
+            "kind": "arrow",
+            "at": "anchoring",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "from": "hake",
+            "to": "s5",
+            "label": "",
+            "dashed": false,
+            "flow": true
+          }
+        ],
+        "actions": [
+          {
+            "do": "focus",
+            "at": "exactly",
+            "target": [
+              "hake"
+            ]
+          },
+          {
+            "do": "flow",
+            "at": "anchoring",
+            "target": [
+              "a2"
+            ]
+          },
+          {
+            "do": "flow",
+            "at": "anchoring",
+            "target": [
+              "a3"
+            ]
+          },
+          {
+            "do": "flow",
+            "at": "anchoring",
+            "target": [
+              "a4"
+            ]
+          },
+          {
+            "do": "pulse",
+            "at": "whole",
+            "target": [
+              "hake"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "timing": {
+    "DURATION": 85.4,
+    "SPEECH_END": 81.32,
+    "beats": [
+      {
+        "start": 0.4,
+        "end": 4,
+        "words": [
+          {
+            "w": "a",
+            "s": 0.4,
+            "e": 1.08
+          },
+          {
+            "w": "bottle",
+            "s": 1.08,
+            "e": 1.08
+          },
+          {
+            "w": "of",
+            "s": 1.08,
+            "e": 1.38
+          },
+          {
+            "w": "seawater",
+            "s": 1.38,
+            "e": 1.76
+          },
+          {
+            "w": "holds",
+            "s": 1.76,
+            "e": 2.18
+          },
+          {
+            "w": "dna",
+            "s": 2.18,
+            "e": 2.68
+          },
+          {
+            "w": "from",
+            "s": 2.68,
+            "e": 3.12
+          },
+          {
+            "w": "dozens",
+            "s": 3.12,
+            "e": 3.52
+          },
+          {
+            "w": "of",
+            "s": 3.52,
+            "e": 4
+          },
+          {
+            "w": "fish",
+            "s": 4,
+            "e": 4
+          }
+        ]
+      },
+      {
+        "start": 4.52,
+        "end": 7.86,
+        "words": [
+          {
+            "w": "but",
+            "s": 4.52,
+            "e": 4.92
+          },
+          {
+            "w": "sequencing",
+            "s": 4.92,
+            "e": 5.2
+          },
+          {
+            "w": "only",
+            "s": 5.2,
+            "e": 5.74
+          },
+          {
+            "w": "tells",
+            "s": 5.74,
+            "e": 5.86
+          },
+          {
+            "w": "you",
+            "s": 5.86,
+            "e": 6.18
+          },
+          {
+            "w": "proportions",
+            "s": 6.18,
+            "e": 6.68
+          },
+          {
+            "w": "never",
+            "s": 7.3,
+            "e": 7.3
+          },
+          {
+            "w": "how",
+            "s": 7.3,
+            "e": 7.64
+          },
+          {
+            "w": "much",
+            "s": 7.64,
+            "e": 7.86
+          }
+        ]
+      },
+      {
+        "start": 8.54,
+        "end": 9.96,
+        "words": [
+          {
+            "w": "thats",
+            "s": 8.54,
+            "e": 8.86
+          },
+          {
+            "w": "the",
+            "s": 8.86,
+            "e": 9.14
+          },
+          {
+            "w": "gap",
+            "s": 9.14,
+            "e": 9.14
+          },
+          {
+            "w": "this",
+            "s": 9.14,
+            "e": 9.36
+          },
+          {
+            "w": "project",
+            "s": 9.36,
+            "e": 9.62
+          },
+          {
+            "w": "closes",
+            "s": 9.62,
+            "e": 9.96
+          }
+        ]
+      },
+      {
+        "start": 10.62,
+        "end": 14.02,
+        "words": [
+          {
+            "w": "its",
+            "s": 10.62,
+            "e": 10.84
+          },
+          {
+            "w": "a",
+            "s": 10.84,
+            "e": 11.08
+          },
+          {
+            "w": "reproducible",
+            "s": 11.08,
+            "e": 11.54
+          },
+          {
+            "w": "research",
+            "s": 11.54,
+            "e": 11.96
+          },
+          {
+            "w": "pipeline",
+            "s": 11.96,
+            "e": 12.26
+          },
+          {
+            "w": "that",
+            "s": 12.26,
+            "e": 12.66
+          },
+          {
+            "w": "joins",
+            "s": 12.66,
+            "e": 12.8
+          },
+          {
+            "w": "two",
+            "s": 12.8,
+            "e": 13.18
+          },
+          {
+            "w": "kinds",
+            "s": 13.18,
+            "e": 13.48
+          },
+          {
+            "w": "of",
+            "s": 13.48,
+            "e": 14.02
+          },
+          {
+            "w": "evidence",
+            "s": 14.02,
+            "e": 14.02
+          }
+        ]
+      },
+      {
+        "start": 14.64,
+        "end": 18.44,
+        "words": [
+          {
+            "w": "qpcr",
+            "s": 14.64,
+            "e": 15.14
+          },
+          {
+            "w": "which",
+            "s": 15.36,
+            "e": 15.66
+          },
+          {
+            "w": "measures",
+            "s": 15.66,
+            "e": 15.76
+          },
+          {
+            "w": "the",
+            "s": 15.76,
+            "e": 16.1
+          },
+          {
+            "w": "absolute",
+            "s": 16.1,
+            "e": 16.48
+          },
+          {
+            "w": "amount",
+            "s": 16.48,
+            "e": 16.68
+          },
+          {
+            "w": "of",
+            "s": 16.68,
+            "e": 17
+          },
+          {
+            "w": "one",
+            "s": 17,
+            "e": 17.2
+          },
+          {
+            "w": "reference",
+            "s": 17.2,
+            "e": 17.58
+          },
+          {
+            "w": "species",
+            "s": 17.58,
+            "e": 17.94
+          },
+          {
+            "w": "hake",
+            "s": 18.44,
+            "e": 18.44
+          }
+        ]
+      },
+      {
+        "start": 18.82,
+        "end": 23.12,
+        "words": [
+          {
+            "w": "and",
+            "s": 18.82,
+            "e": 19.26
+          },
+          {
+            "w": "metabarcoding",
+            "s": 19.26,
+            "e": 19.82
+          },
+          {
+            "w": "which",
+            "s": 20.12,
+            "e": 20.4
+          },
+          {
+            "w": "reads",
+            "s": 20.4,
+            "e": 20.6
+          },
+          {
+            "w": "every",
+            "s": 20.6,
+            "e": 21.06
+          },
+          {
+            "w": "species",
+            "s": 21.06,
+            "e": 21.28
+          },
+          {
+            "w": "at",
+            "s": 21.28,
+            "e": 21.84
+          },
+          {
+            "w": "once",
+            "s": 21.84,
+            "e": 21.84
+          },
+          {
+            "w": "but",
+            "s": 22.2,
+            "e": 22.32
+          },
+          {
+            "w": "only",
+            "s": 22.32,
+            "e": 22.56
+          },
+          {
+            "w": "as",
+            "s": 22.56,
+            "e": 22.96
+          },
+          {
+            "w": "shares",
+            "s": 22.96,
+            "e": 23.12
+          }
+        ]
+      },
+      {
+        "start": 23.82,
+        "end": 26.26,
+        "words": [
+          {
+            "w": "feed",
+            "s": 23.82,
+            "e": 24.16
+          },
+          {
+            "w": "both",
+            "s": 24.16,
+            "e": 24.52
+          },
+          {
+            "w": "into",
+            "s": 24.52,
+            "e": 24.76
+          },
+          {
+            "w": "one",
+            "s": 24.76,
+            "e": 25.1
+          },
+          {
+            "w": "joint",
+            "s": 25.1,
+            "e": 25.52
+          },
+          {
+            "w": "statistical",
+            "s": 25.52,
+            "e": 25.96
+          },
+          {
+            "w": "model",
+            "s": 25.96,
+            "e": 26.26
+          }
+        ]
+      },
+      {
+        "start": 26.58,
+        "end": 30.18,
+        "words": [
+          {
+            "w": "and",
+            "s": 26.58,
+            "e": 26.82
+          },
+          {
+            "w": "the",
+            "s": 26.82,
+            "e": 27.14
+          },
+          {
+            "w": "shares",
+            "s": 27.14,
+            "e": 27.14
+          },
+          {
+            "w": "turn",
+            "s": 27.14,
+            "e": 27.44
+          },
+          {
+            "w": "into",
+            "s": 27.44,
+            "e": 27.72
+          },
+          {
+            "w": "estimated",
+            "s": 27.72,
+            "e": 28.2
+          },
+          {
+            "w": "dna",
+            "s": 28.2,
+            "e": 28.6
+          },
+          {
+            "w": "concentrations",
+            "s": 28.6,
+            "e": 29.1
+          },
+          {
+            "w": "for",
+            "s": 29.1,
+            "e": 29.42
+          },
+          {
+            "w": "every",
+            "s": 29.42,
+            "e": 29.76
+          },
+          {
+            "w": "species",
+            "s": 29.76,
+            "e": 30.18
+          }
+        ]
+      },
+      {
+        "start": 31.08,
+        "end": 35.1,
+        "words": [
+          {
+            "w": "from",
+            "s": 31.08,
+            "e": 31.18
+          },
+          {
+            "w": "there",
+            "s": 31.18,
+            "e": 31.52
+          },
+          {
+            "w": "spatial",
+            "s": 32.04,
+            "e": 32.22
+          },
+          {
+            "w": "smooths",
+            "s": 32.22,
+            "e": 32.72
+          },
+          {
+            "w": "spread",
+            "s": 32.72,
+            "e": 33.02
+          },
+          {
+            "w": "those",
+            "s": 33.02,
+            "e": 33.74
+          },
+          {
+            "w": "estimates",
+            "s": 33.74,
+            "e": 33.74
+          },
+          {
+            "w": "across",
+            "s": 33.74,
+            "e": 34.24
+          },
+          {
+            "w": "the",
+            "s": 34.24,
+            "e": 34.52
+          },
+          {
+            "w": "survey",
+            "s": 34.52,
+            "e": 34.74
+          },
+          {
+            "w": "area",
+            "s": 34.74,
+            "e": 35.1
+          }
+        ]
+      },
+      {
+        "start": 35.44,
+        "end": 36.82,
+        "words": [
+          {
+            "w": "so",
+            "s": 35.44,
+            "e": 35.56
+          },
+          {
+            "w": "you",
+            "s": 35.56,
+            "e": 35.64
+          },
+          {
+            "w": "get",
+            "s": 35.64,
+            "e": 35.84
+          },
+          {
+            "w": "maps",
+            "s": 35.84,
+            "e": 36.06
+          },
+          {
+            "w": "with",
+            "s": 36.06,
+            "e": 36.5
+          },
+          {
+            "w": "uncertainty",
+            "s": 36.5,
+            "e": 36.82
+          }
+        ]
+      },
+      {
+        "start": 37.28,
+        "end": 39.38,
+        "words": [
+          {
+            "w": "and",
+            "s": 37.28,
+            "e": 37.54
+          },
+          {
+            "w": "finally",
+            "s": 37.54,
+            "e": 37.92
+          },
+          {
+            "w": "every",
+            "s": 38.26,
+            "e": 38.48
+          },
+          {
+            "w": "figure",
+            "s": 38.48,
+            "e": 38.74
+          },
+          {
+            "w": "in",
+            "s": 38.74,
+            "e": 38.88
+          },
+          {
+            "w": "the",
+            "s": 38.88,
+            "e": 39.38
+          },
+          {
+            "w": "manuscript",
+            "s": 39.38,
+            "e": 39.38
+          }
+        ]
+      },
+      {
+        "start": 40.4,
+        "end": 42.12,
+        "words": [
+          {
+            "w": "reproducing",
+            "s": 40.4,
+            "e": 40.92
+          },
+          {
+            "w": "it",
+            "s": 40.92,
+            "e": 41.2
+          },
+          {
+            "w": "starts",
+            "s": 41.2,
+            "e": 41.42
+          },
+          {
+            "w": "with",
+            "s": 41.42,
+            "e": 41.64
+          },
+          {
+            "w": "one",
+            "s": 41.64,
+            "e": 41.92
+          },
+          {
+            "w": "script",
+            "s": 41.92,
+            "e": 42.12
+          }
+        ]
+      },
+      {
+        "start": 42.74,
+        "end": 46.44,
+        "words": [
+          {
+            "w": "you",
+            "s": 42.74,
+            "e": 42.9
+          },
+          {
+            "w": "clone",
+            "s": 42.9,
+            "e": 43
+          },
+          {
+            "w": "the",
+            "s": 43,
+            "e": 43.64
+          },
+          {
+            "w": "repository",
+            "s": 43.64,
+            "e": 43.64
+          },
+          {
+            "w": "open",
+            "s": 44.22,
+            "e": 44.28
+          },
+          {
+            "w": "the",
+            "s": 44.28,
+            "e": 44.5
+          },
+          {
+            "w": "r",
+            "s": 44.5,
+            "e": 44.64
+          },
+          {
+            "w": "project",
+            "s": 44.64,
+            "e": 45.06
+          },
+          {
+            "w": "and",
+            "s": 45.18,
+            "e": 45.6
+          },
+          {
+            "w": "run",
+            "s": 45.6,
+            "e": 45.72
+          },
+          {
+            "w": "the",
+            "s": 45.72,
+            "e": 45.9
+          },
+          {
+            "w": "zero",
+            "s": 45.9,
+            "e": 46.16
+          },
+          {
+            "w": "file",
+            "s": 46.16,
+            "e": 46.44
+          }
+        ]
+      },
+      {
+        "start": 46.76,
+        "end": 48.66,
+        "words": [
+          {
+            "w": "it",
+            "s": 46.76,
+            "e": 47.32
+          },
+          {
+            "w": "pulls",
+            "s": 47.32,
+            "e": 47.46
+          },
+          {
+            "w": "the",
+            "s": 47.46,
+            "e": 47.68
+          },
+          {
+            "w": "data",
+            "s": 47.68,
+            "e": 47.86
+          },
+          {
+            "w": "archive",
+            "s": 47.86,
+            "e": 48.16
+          },
+          {
+            "w": "from",
+            "s": 48.16,
+            "e": 48.4
+          },
+          {
+            "w": "zenodo",
+            "s": 48.4,
+            "e": 48.66
+          }
+        ]
+      },
+      {
+        "start": 49.32,
+        "end": 51.08,
+        "words": [
+          {
+            "w": "fetches",
+            "s": 49.32,
+            "e": 49.32
+          },
+          {
+            "w": "the",
+            "s": 49.32,
+            "e": 49.66
+          },
+          {
+            "w": "raw",
+            "s": 49.66,
+            "e": 49.84
+          },
+          {
+            "w": "reads",
+            "s": 49.84,
+            "e": 50.08
+          },
+          {
+            "w": "from",
+            "s": 50.08,
+            "e": 50.26
+          },
+          {
+            "w": "the",
+            "s": 50.26,
+            "e": 50.4
+          },
+          {
+            "w": "sequence",
+            "s": 50.4,
+            "e": 50.74
+          },
+          {
+            "w": "archive",
+            "s": 50.74,
+            "e": 51.08
+          }
+        ]
+      },
+      {
+        "start": 51.34,
+        "end": 53.18,
+        "words": [
+          {
+            "w": "and",
+            "s": 51.34,
+            "e": 51.78
+          },
+          {
+            "w": "stitches",
+            "s": 51.78,
+            "e": 51.86
+          },
+          {
+            "w": "them",
+            "s": 51.86,
+            "e": 52.14
+          },
+          {
+            "w": "into",
+            "s": 52.14,
+            "e": 52.34
+          },
+          {
+            "w": "one",
+            "s": 52.34,
+            "e": 52.58
+          },
+          {
+            "w": "combined",
+            "s": 52.58,
+            "e": 52.92
+          },
+          {
+            "w": "file",
+            "s": 52.92,
+            "e": 53.18
+          }
+        ]
+      },
+      {
+        "start": 53.6,
+        "end": 55.46,
+        "words": [
+          {
+            "w": "then",
+            "s": 53.6,
+            "e": 54.16
+          },
+          {
+            "w": "three",
+            "s": 54.16,
+            "e": 54.56
+          },
+          {
+            "w": "notebooks",
+            "s": 54.56,
+            "e": 54.9
+          },
+          {
+            "w": "run",
+            "s": 54.9,
+            "e": 55.12
+          },
+          {
+            "w": "in",
+            "s": 55.12,
+            "e": 55.46
+          },
+          {
+            "w": "order",
+            "s": 55.46,
+            "e": 55.46
+          }
+        ]
+      },
+      {
+        "start": 55.74,
+        "end": 61.62,
+        "words": [
+          {
+            "w": "the",
+            "s": 55.74,
+            "e": 56.06
+          },
+          {
+            "w": "first",
+            "s": 56.06,
+            "e": 56.38
+          },
+          {
+            "w": "fits",
+            "s": 56.38,
+            "e": 56.62
+          },
+          {
+            "w": "the",
+            "s": 56.62,
+            "e": 56.84
+          },
+          {
+            "w": "joint",
+            "s": 56.84,
+            "e": 57.1
+          },
+          {
+            "w": "model",
+            "s": 57.1,
+            "e": 57.28
+          },
+          {
+            "w": "in",
+            "s": 57.28,
+            "e": 57.72
+          },
+          {
+            "w": "stan",
+            "s": 57.72,
+            "e": 57.72
+          },
+          {
+            "w": "alongside",
+            "s": 58.42,
+            "e": 58.42
+          },
+          {
+            "w": "a",
+            "s": 58.42,
+            "e": 58.7
+          },
+          {
+            "w": "mock",
+            "s": 58.7,
+            "e": 58.84
+          },
+          {
+            "w": "community",
+            "s": 58.84,
+            "e": 59.3
+          },
+          {
+            "w": "calibration",
+            "s": 59.3,
+            "e": 59.74
+          },
+          {
+            "w": "that",
+            "s": 59.74,
+            "e": 60.08
+          },
+          {
+            "w": "learns",
+            "s": 60.08,
+            "e": 60.24
+          },
+          {
+            "w": "how",
+            "s": 60.24,
+            "e": 60.52
+          },
+          {
+            "w": "each",
+            "s": 60.52,
+            "e": 60.82
+          },
+          {
+            "w": "species",
+            "s": 60.82,
+            "e": 61.08
+          },
+          {
+            "w": "amplifies",
+            "s": 61.08,
+            "e": 61.62
+          }
+        ]
+      },
+      {
+        "start": 62.3,
+        "end": 63.86,
+        "words": [
+          {
+            "w": "the",
+            "s": 62.3,
+            "e": 62.48
+          },
+          {
+            "w": "second",
+            "s": 62.48,
+            "e": 62.66
+          },
+          {
+            "w": "fits",
+            "s": 62.66,
+            "e": 62.86
+          },
+          {
+            "w": "the",
+            "s": 62.86,
+            "e": 63.22
+          },
+          {
+            "w": "spatial",
+            "s": 63.22,
+            "e": 63.38
+          },
+          {
+            "w": "smooths",
+            "s": 63.38,
+            "e": 63.86
+          }
+        ]
+      },
+      {
+        "start": 64.02,
+        "end": 65.44,
+        "words": [
+          {
+            "w": "the",
+            "s": 64.02,
+            "e": 64.6
+          },
+          {
+            "w": "third",
+            "s": 64.6,
+            "e": 64.76
+          },
+          {
+            "w": "draws",
+            "s": 64.76,
+            "e": 64.98
+          },
+          {
+            "w": "the",
+            "s": 64.98,
+            "e": 65.44
+          },
+          {
+            "w": "figures",
+            "s": 65.44,
+            "e": 65.44
+          }
+        ]
+      },
+      {
+        "start": 66.3,
+        "end": 68.64,
+        "words": [
+          {
+            "w": "and",
+            "s": 66.3,
+            "e": 66.56
+          },
+          {
+            "w": "because",
+            "s": 66.56,
+            "e": 66.9
+          },
+          {
+            "w": "each",
+            "s": 66.9,
+            "e": 67.26
+          },
+          {
+            "w": "stage",
+            "s": 67.26,
+            "e": 67.58
+          },
+          {
+            "w": "caches",
+            "s": 67.58,
+            "e": 67.98
+          },
+          {
+            "w": "its",
+            "s": 67.98,
+            "e": 68.42
+          },
+          {
+            "w": "outputs",
+            "s": 68.42,
+            "e": 68.64
+          }
+        ]
+      },
+      {
+        "start": 69.02,
+        "end": 71.88,
+        "words": [
+          {
+            "w": "you",
+            "s": 69.02,
+            "e": 69.1
+          },
+          {
+            "w": "can",
+            "s": 69.1,
+            "e": 69.5
+          },
+          {
+            "w": "skip",
+            "s": 69.5,
+            "e": 69.5
+          },
+          {
+            "w": "the",
+            "s": 69.5,
+            "e": 69.84
+          },
+          {
+            "w": "expensive",
+            "s": 69.84,
+            "e": 70.14
+          },
+          {
+            "w": "model",
+            "s": 70.14,
+            "e": 70.42
+          },
+          {
+            "w": "fitting",
+            "s": 70.42,
+            "e": 70.6
+          },
+          {
+            "w": "and",
+            "s": 70.6,
+            "e": 70.92
+          },
+          {
+            "w": "jump",
+            "s": 70.92,
+            "e": 71.08
+          },
+          {
+            "w": "straight",
+            "s": 71.08,
+            "e": 71.42
+          },
+          {
+            "w": "to",
+            "s": 71.42,
+            "e": 71.56
+          },
+          {
+            "w": "the",
+            "s": 71.56,
+            "e": 71.88
+          },
+          {
+            "w": "maps",
+            "s": 71.88,
+            "e": 71.88
+          }
+        ]
+      },
+      {
+        "start": 72.24,
+        "end": 76.12,
+        "words": [
+          {
+            "w": "the",
+            "s": 72.24,
+            "e": 72.86
+          },
+          {
+            "w": "downloader",
+            "s": 72.86,
+            "e": 73.26
+          },
+          {
+            "w": "even",
+            "s": 73.26,
+            "e": 73.52
+          },
+          {
+            "w": "remembers",
+            "s": 73.52,
+            "e": 73.74
+          },
+          {
+            "w": "what",
+            "s": 73.74,
+            "e": 74.3
+          },
+          {
+            "w": "failed",
+            "s": 74.3,
+            "e": 74.3
+          },
+          {
+            "w": "so",
+            "s": 74.56,
+            "e": 74.74
+          },
+          {
+            "w": "a",
+            "s": 74.74,
+            "e": 74.94
+          },
+          {
+            "w": "broken",
+            "s": 74.94,
+            "e": 75.14
+          },
+          {
+            "w": "run",
+            "s": 75.14,
+            "e": 75.36
+          },
+          {
+            "w": "retries",
+            "s": 75.36,
+            "e": 75.72
+          },
+          {
+            "w": "alone",
+            "s": 75.72,
+            "e": 76.12
+          }
+        ]
+      },
+      {
+        "start": 76.86,
+        "end": 81.32,
+        "words": [
+          {
+            "w": "one",
+            "s": 76.86,
+            "e": 77.2
+          },
+          {
+            "w": "known",
+            "s": 77.2,
+            "e": 77.46
+          },
+          {
+            "w": "species",
+            "s": 77.46,
+            "e": 77.92
+          },
+          {
+            "w": "measured",
+            "s": 78.42,
+            "e": 78.42
+          },
+          {
+            "w": "exactly",
+            "s": 78.42,
+            "e": 79.04
+          },
+          {
+            "w": "ends",
+            "s": 79.68,
+            "e": 79.7
+          },
+          {
+            "w": "up",
+            "s": 79.7,
+            "e": 80.16
+          },
+          {
+            "w": "anchoring",
+            "s": 80.16,
+            "e": 80.16
+          },
+          {
+            "w": "the",
+            "s": 80.16,
+            "e": 80.44
+          },
+          {
+            "w": "whole",
+            "s": 80.44,
+            "e": 80.74
+          },
+          {
+            "w": "oceans",
+            "s": 80.74,
+            "e": 81.04
+          },
+          {
+            "w": "count",
+            "s": 81.04,
+            "e": 81.32
+          }
+        ]
+      }
+    ]
+  },
+  "voices": [
+    {
+      "start": 0.4
+    }
+  ],
+  "stats": {
+    "totalMs": 52306,
+    "readMs": 979,
+    "planMs": 17179,
+    "voiceMs": 34147,
+    "planner": "api",
+    "model": "claude-opus-5-5+claude-haiku-5-5",
+    "plannerCostUsd": null,
+    "inputTokens": null,
+    "outputTokens": null,
+    "ttsCharacters": 1370,
+    "voice": "google/gemini-3.8-flash-tts:Charon",
+    "warnings": [
+      "dropped file SRA/combined_R2.fastq not in repo (beat 15)",
+      "dropped arrow a3 with a missing end (beat 15)",
+      "dropped flow on a missing target (beat 15)",
+      "dropped pulse on a missing target (beat 15)",
+      "dropped unknown path Intermediate_data/Joint_mod_data_input.rds (beat 20)",
+      "dropped unknown path Intermediate_data/Joint_mod_output.rds (beat 20)",
+      "dropped unknown path Intermediate_data/Log_D_est.rds (beat 20)",
+      "dropped unknown path Intermediate_data/Log_D_est_smoothed.rds (beat 20)",
+      "dropped unknown path Intermediate_data/all_maps_se.rds (beat 20)",
+      "dropped tree cache with no known paths (beat 20)",
+      "dropped arrow skip with a missing end (beat 21)",
+      "dropped arrow feed with a missing end (beat 21)",
+      "dropped highlight on a missing target (beat 21)"
+    ]
+  }
+}

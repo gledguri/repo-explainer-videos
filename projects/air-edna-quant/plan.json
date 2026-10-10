@@ -1,0 +1,1128 @@
+{
+  "title": "Fish Can Fly",
+  "outro": "Salmon in the river, DNA in the air.",
+  "beats": [
+    {
+      "scene": "1 River",
+      "narration": "Salmon are swimming up a river,",
+      "transition": "cut",
+      "elements": [
+        {
+          "id": "title",
+          "kind": "heading",
+          "at": "",
+          "x": 2.08,
+          "y": 2.1,
+          "w": 7.38,
+          "h": 1.58,
+          "text": "Fish can *fly*"
+        },
+        {
+          "id": "fish",
+          "kind": "chip",
+          "at": "salmon",
+          "x": 2.08,
+          "y": 4.17,
+          "w": 4.9,
+          "h": 0.87,
+          "text": "river: coho, chinook",
+          "tone": "accent"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "scene": "1 River",
+      "narration": "and somewhere above the water, a passive air sampler sits,",
+      "transition": "",
+      "elements": [
+        {
+          "id": "air",
+          "kind": "box",
+          "at": "sampler",
+          "x": 10.11,
+          "y": 1.98,
+          "w": 3.81,
+          "h": 1.82,
+          "label": "passive air sampler",
+          "sub": "above the water",
+          "icon": "gear",
+          "tone": "plain"
+        },
+        {
+          "id": "water",
+          "kind": "box",
+          "at": "water",
+          "x": 10.11,
+          "y": 4.7,
+          "w": 3.81,
+          "h": 1.82,
+          "label": "river water",
+          "sub": "",
+          "icon": "globe",
+          "tone": "soft"
+        },
+        {
+          "id": "up",
+          "kind": "arrow",
+          "at": "sampler",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "water",
+          "to": "air",
+          "label": "",
+          "dashed": true,
+          "flow": false
+        }
+      ],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "sampler",
+          "target": [
+            "air"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "1 River",
+      "narration": "collecting whatever drifts past. Can that air tell you which fish are there?",
+      "transition": "",
+      "elements": [
+        {
+          "id": "q",
+          "kind": "chip",
+          "at": "which",
+          "x": 2.08,
+          "y": 5.54,
+          "w": 0.7,
+          "h": 0.87,
+          "text": "?",
+          "tone": "accent"
+        }
+      ],
+      "actions": [
+        {
+          "do": "flow",
+          "at": "collecting",
+          "target": [
+            "up"
+          ]
+        },
+        {
+          "do": "pulse",
+          "at": "which",
+          "target": [
+            "q"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "2 Study",
+      "narration": "This repository holds the full study that asks exactly that:",
+      "transition": "push",
+      "elements": [
+        {
+          "id": "manuscript",
+          "kind": "file",
+          "at": "study",
+          "x": 2.86,
+          "y": 3.75,
+          "w": 3.44,
+          "h": 1,
+          "path": "Manuscript/LaTeX/Recursive/main.pdf"
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "study",
+          "target": [
+            "manuscript"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "2 Study",
+      "narration": "passive air sampling detects environmental DNA transfer from water into air.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "title_a",
+          "kind": "heading",
+          "at": "passive",
+          "x": 6.94,
+          "y": 1.35,
+          "w": 4.58,
+          "h": 1.9,
+          "text": "Passive *air* sampling"
+        },
+        {
+          "id": "title_b",
+          "kind": "heading",
+          "at": "detects",
+          "x": 6.94,
+          "y": 3.74,
+          "w": 6.2,
+          "h": 2.27,
+          "text": "detects environmental DNA transfer from *water* into *air*."
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "water",
+          "target": [
+            "title_b"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "2 Study",
+      "narration": "It is for anyone who wants to check the claim, or reuse the approach.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "chip_reproduce",
+          "kind": "chip",
+          "at": "check",
+          "x": 6.94,
+          "y": 6.5,
+          "w": 1.98,
+          "h": 0.65,
+          "text": "reproduce",
+          "tone": "plain"
+        },
+        {
+          "id": "chip_reuse",
+          "kind": "chip",
+          "at": "reuse",
+          "x": 9.56,
+          "y": 6.5,
+          "w": 1.31,
+          "h": 0.65,
+          "text": "reuse",
+          "tone": "plain"
+        }
+      ],
+      "actions": [
+        {
+          "do": "check",
+          "at": "check",
+          "target": [
+            "chip_reproduce"
+          ]
+        },
+        {
+          "do": "check",
+          "at": "reuse",
+          "target": [
+            "chip_reuse"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "3 Run it",
+      "narration": "You open one R project, nicknamed Fish can fly,",
+      "transition": "push",
+      "elements": [
+        {
+          "id": "rproj",
+          "kind": "file",
+          "at": "project",
+          "x": 5.91,
+          "y": 1.37,
+          "w": 4.18,
+          "h": 1.32,
+          "path": "Fish_can_fly.Rproj"
+        }
+      ],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "fly",
+          "target": [
+            "rproj"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "3 Run it",
+      "narration": "run the scripts,",
+      "transition": "",
+      "elements": [
+        {
+          "id": "script",
+          "kind": "file",
+          "at": "run",
+          "x": 5.91,
+          "y": 3.59,
+          "w": 4.18,
+          "h": 1.32,
+          "path": "Code/Run the model.R"
+        },
+        {
+          "id": "run_arrow",
+          "kind": "arrow",
+          "at": "run",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "rproj",
+          "to": "script",
+          "label": "",
+          "dashed": false,
+          "flow": false
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "scripts",
+          "target": [
+            "script"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "3 Run it",
+      "narration": "and the figures from the paper come back out.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "fig1",
+          "kind": "file",
+          "at": "figures",
+          "x": 3.5,
+          "y": 5.81,
+          "w": 4.18,
+          "h": 1.32,
+          "path": "Plots/Figure_1.pdf"
+        },
+        {
+          "id": "fig1_arrow",
+          "kind": "arrow",
+          "at": "figures",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "script",
+          "to": "fig1",
+          "label": "",
+          "dashed": false,
+          "flow": false
+        },
+        {
+          "id": "fig2",
+          "kind": "file",
+          "at": "back",
+          "x": 8.32,
+          "y": 5.81,
+          "w": 4.18,
+          "h": 1.32,
+          "path": "Plots/Figure_2.pdf"
+        },
+        {
+          "id": "fig2_arrow",
+          "kind": "arrow",
+          "at": "back",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "script",
+          "to": "fig2",
+          "label": "",
+          "dashed": false,
+          "flow": false
+        }
+      ],
+      "actions": [
+        {
+          "do": "flow",
+          "at": "out",
+          "target": [
+            "fig1_arrow"
+          ]
+        },
+        {
+          "do": "flow",
+          "at": "out",
+          "target": [
+            "fig2_arrow"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "4 Folder",
+      "narration": "Everything sits beside it: the raw field and lab data, the model outputs,",
+      "transition": "slide",
+      "elements": [
+        {
+          "id": "tree",
+          "kind": "tree",
+          "at": "everything",
+          "x": 5.4,
+          "y": 2.75,
+          "w": 5.2,
+          "h": 3,
+          "paths": [
+            "Code",
+            "Data",
+            "Output",
+            "Plots",
+            "Manuscript",
+            "Review"
+          ],
+          "focus": []
+        }
+      ],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "data",
+          "target": [
+            "tree"
+          ],
+          "rows": [
+            2
+          ]
+        },
+        {
+          "do": "highlight",
+          "at": "outputs",
+          "target": [
+            "tree"
+          ],
+          "rows": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "4 Folder",
+      "narration": "the figures, the final manuscript, and the peer review comments.",
+      "transition": "",
+      "elements": [],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "figures",
+          "target": [
+            "tree"
+          ],
+          "rows": [
+            4
+          ]
+        },
+        {
+          "do": "highlight",
+          "at": "manuscript",
+          "target": [
+            "tree"
+          ],
+          "rows": [
+            5
+          ]
+        },
+        {
+          "do": "highlight",
+          "at": "review",
+          "target": [
+            "tree"
+          ],
+          "rows": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "5 Data",
+      "narration": "So the path starts with raw data, left untouched.",
+      "transition": "push",
+      "elements": [
+        {
+          "id": "data_tree",
+          "kind": "tree",
+          "at": "path",
+          "x": 2.73,
+          "y": 2.75,
+          "w": 8.25,
+          "h": 3,
+          "paths": [
+            "Data/qPCR_data/2024-10-26_173653_coho_air.csv",
+            "Data/qPCR_data/2024-10-15_115833_ck-air.csv",
+            "Data/qPCR_data/2024-11-15_153755_salmon_standards.csv",
+            "Data/Count_data/coho_count.csv",
+            "Data/Count_data/chinook_count.csv",
+            "Data/Weather metadata/metadata.csv"
+          ],
+          "focus": []
+        },
+        {
+          "id": "raw_stamp",
+          "kind": "stamp",
+          "at": "raw",
+          "x": 11.63,
+          "y": 3.71,
+          "w": 1.64,
+          "h": 1.08,
+          "text": "raw",
+          "tone": "ok"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "scene": "5 Data",
+      "narration": "There are qPCR runs from air samples for coho and chinook,",
+      "transition": "",
+      "elements": [],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "qpcr",
+          "target": [
+            "data_tree"
+          ],
+          "rows": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "5 Data",
+      "narration": "salmon standards, and fish counts for both species,",
+      "transition": "",
+      "elements": [],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "standards",
+          "target": [
+            "data_tree"
+          ],
+          "rows": [
+            3
+          ]
+        },
+        {
+          "do": "highlight",
+          "at": "counts",
+          "target": [
+            "data_tree"
+          ],
+          "rows": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "5 Data",
+      "narration": "plus weather records.",
+      "transition": "",
+      "elements": [],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "weather",
+          "target": [
+            "data_tree"
+          ],
+          "rows": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "6 Pipeline",
+      "narration": "The R scripts load and clean them,",
+      "transition": "push",
+      "elements": [
+        {
+          "id": "data",
+          "kind": "box",
+          "at": "the",
+          "x": 1.27,
+          "y": 3.41,
+          "w": 3.72,
+          "h": 1.68,
+          "label": "Data",
+          "sub": "Data/ folder",
+          "icon": "folder",
+          "tone": "plain"
+        },
+        {
+          "id": "rscripts",
+          "kind": "box",
+          "at": "scripts",
+          "x": 6.14,
+          "y": 3.41,
+          "w": 3.72,
+          "h": 1.68,
+          "label": "R scripts",
+          "sub": "Code/ folder",
+          "icon": "terminal",
+          "tone": "soft"
+        },
+        {
+          "id": "a1",
+          "kind": "arrow",
+          "at": "load",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "data",
+          "to": "rscripts",
+          "label": "",
+          "dashed": false,
+          "flow": false
+        }
+      ],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "load",
+          "target": [
+            "data"
+          ]
+        },
+        {
+          "do": "flow",
+          "at": "clean",
+          "target": [
+            "a1"
+          ]
+        },
+        {
+          "do": "pulse",
+          "at": "clean",
+          "target": [
+            "rscripts"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "6 Pipeline",
+      "narration": "then hand them to a single Stan joint model.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "stan",
+          "kind": "box",
+          "at": "stan",
+          "x": 11.01,
+          "y": 3.41,
+          "w": 3.72,
+          "h": 1.68,
+          "label": "Stan joint model",
+          "sub": "Code/Joined_model.stan",
+          "icon": "cpu",
+          "tone": "accent"
+        },
+        {
+          "id": "a2",
+          "kind": "arrow",
+          "at": "stan",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "rscripts",
+          "to": "stan",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        }
+      ],
+      "actions": [
+        {
+          "do": "flow",
+          "at": "joint",
+          "target": [
+            "a2"
+          ]
+        },
+        {
+          "do": "pulse",
+          "at": "model",
+          "target": [
+            "stan"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "7 Results",
+      "narration": "That model returns posterior distributions, saved to the output folder,",
+      "transition": "push",
+      "elements": [
+        {
+          "id": "out",
+          "kind": "file",
+          "at": "output",
+          "x": 3.84,
+          "y": 1.55,
+          "w": 4.54,
+          "h": 1.32,
+          "path": "Output/stanMod_output_3.rds"
+        },
+        {
+          "id": "parts",
+          "kind": "chip",
+          "at": "saved",
+          "x": 9.03,
+          "y": 1.78,
+          "w": 3.14,
+          "h": 0.87,
+          "text": "3 .bin parts",
+          "tone": "soft"
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "posterior",
+          "target": [
+            "out"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "7 Results",
+      "narration": "and the plotting routines turn those into every figure.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "plots",
+          "kind": "box",
+          "at": "plotting",
+          "x": 6.31,
+          "y": 3.77,
+          "w": 3.38,
+          "h": 1.41,
+          "label": "Plots/",
+          "sub": "plotting routines",
+          "icon": "folder",
+          "tone": "accent"
+        },
+        {
+          "id": "flow1",
+          "kind": "arrow",
+          "at": "turn",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "out",
+          "to": "plots",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        },
+        {
+          "id": "figs",
+          "kind": "chip",
+          "at": "every",
+          "x": 2.99,
+          "y": 6.08,
+          "w": 4.46,
+          "h": 0.87,
+          "text": "Figure 1, Figure 2",
+          "tone": "ok"
+        },
+        {
+          "id": "supp",
+          "kind": "chip",
+          "at": "figure",
+          "x": 8.1,
+          "y": 6.08,
+          "w": 4.9,
+          "h": 0.87,
+          "text": "Supplementary 1 to 6",
+          "tone": "ok"
+        },
+        {
+          "id": "to_figs",
+          "kind": "arrow",
+          "at": "every",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "plots",
+          "to": "figs",
+          "label": "",
+          "dashed": false,
+          "flow": false
+        },
+        {
+          "id": "to_supp",
+          "kind": "arrow",
+          "at": "figure",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "plots",
+          "to": "supp",
+          "label": "",
+          "dashed": false,
+          "flow": false
+        }
+      ],
+      "actions": [
+        {
+          "do": "flow",
+          "at": "turn",
+          "target": [
+            "flow1"
+          ]
+        },
+        {
+          "do": "pulse",
+          "at": "every",
+          "target": [
+            "plots"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "8 Joint",
+      "narration": "But why one joint model?",
+      "transition": "push",
+      "elements": [
+        {
+          "id": "joint_head",
+          "kind": "heading",
+          "at": "",
+          "x": 4.67,
+          "y": 1.35,
+          "w": 6.65,
+          "h": 1.19,
+          "text": "one *joint* model"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "scene": "8 Joint",
+      "narration": "Because the counts, the qPCR standards and the air signal are fitted together,",
+      "transition": "",
+      "elements": [
+        {
+          "id": "fish_counts",
+          "kind": "box",
+          "at": "counts",
+          "x": 4.67,
+          "y": 3.01,
+          "w": 2.47,
+          "h": 1.06,
+          "label": "fish counts",
+          "sub": "",
+          "icon": "none",
+          "tone": "plain"
+        },
+        {
+          "id": "qpcr_std",
+          "kind": "box",
+          "at": "standards",
+          "x": 4.67,
+          "y": 4.55,
+          "w": 2.47,
+          "h": 1.06,
+          "label": "qPCR standards",
+          "sub": "",
+          "icon": "none",
+          "tone": "plain"
+        },
+        {
+          "id": "air_edna",
+          "kind": "box",
+          "at": "air",
+          "x": 4.67,
+          "y": 6.09,
+          "w": 2.47,
+          "h": 1.06,
+          "label": "air eDNA",
+          "sub": "",
+          "icon": "none",
+          "tone": "plain"
+        },
+        {
+          "id": "joint_model",
+          "kind": "box",
+          "at": "fitted",
+          "x": 8.24,
+          "y": 4.55,
+          "w": 2.47,
+          "h": 1.06,
+          "label": "joint model",
+          "sub": "",
+          "icon": "none",
+          "tone": "accent"
+        },
+        {
+          "id": "arr_c",
+          "kind": "arrow",
+          "at": "together",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "fish_counts",
+          "to": "joint_model",
+          "label": "",
+          "dashed": false,
+          "flow": false
+        },
+        {
+          "id": "arr_s",
+          "kind": "arrow",
+          "at": "together",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "qpcr_std",
+          "to": "joint_model",
+          "label": "",
+          "dashed": false,
+          "flow": false
+        },
+        {
+          "id": "arr_a",
+          "kind": "arrow",
+          "at": "together",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "air_edna",
+          "to": "joint_model",
+          "label": "",
+          "dashed": false,
+          "flow": false
+        }
+      ],
+      "actions": [
+        {
+          "do": "highlight",
+          "at": "together",
+          "target": [
+            "joint_model"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "8 Joint",
+      "narration": "so uncertainty in each flows into the others.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "ret_c",
+          "kind": "arrow",
+          "at": "into",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "joint_model",
+          "to": "fish_counts",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        },
+        {
+          "id": "ret_s",
+          "kind": "arrow",
+          "at": "into",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "joint_model",
+          "to": "qpcr_std",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        },
+        {
+          "id": "ret_a",
+          "kind": "arrow",
+          "at": "into",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "joint_model",
+          "to": "air_edna",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        }
+      ],
+      "actions": [
+        {
+          "do": "flow",
+          "at": "uncertainty",
+          "target": [
+            "arr_c"
+          ]
+        },
+        {
+          "do": "flow",
+          "at": "uncertainty",
+          "target": [
+            "arr_s"
+          ]
+        },
+        {
+          "do": "flow",
+          "at": "uncertainty",
+          "target": [
+            "arr_a"
+          ]
+        },
+        {
+          "do": "pulse",
+          "at": "flows",
+          "target": [
+            "joint_model"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "9 Answer",
+      "narration": "Which means the answer to the opening question comes with error bars...",
+      "transition": "push",
+      "elements": [
+        {
+          "id": "fig",
+          "kind": "file",
+          "at": "which",
+          "x": 3.78,
+          "y": 3.59,
+          "w": 3.9,
+          "h": 1.32,
+          "path": "Plots/Figure_2.pdf"
+        },
+        {
+          "id": "posterior",
+          "kind": "chip",
+          "at": "error",
+          "x": 9.04,
+          "y": 2.34,
+          "w": 2.47,
+          "h": 0.87,
+          "text": "posterior",
+          "tone": "accent"
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "error",
+          "target": [
+            "posterior"
+          ]
+        }
+      ]
+    },
+    {
+      "scene": "9 Answer",
+      "narration": "fish counted in the river, measured in the air.",
+      "transition": "",
+      "elements": [
+        {
+          "id": "river",
+          "kind": "chip",
+          "at": "river",
+          "x": 8.33,
+          "y": 3.71,
+          "w": 1.59,
+          "h": 0.87,
+          "text": "river",
+          "tone": "ok"
+        },
+        {
+          "id": "air",
+          "kind": "chip",
+          "at": "measured",
+          "x": 11.07,
+          "y": 3.71,
+          "w": 1.15,
+          "h": 0.87,
+          "text": "air",
+          "tone": "accent"
+        },
+        {
+          "id": "link",
+          "kind": "arrow",
+          "at": "measured",
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "from": "river",
+          "to": "air",
+          "label": "",
+          "dashed": false,
+          "flow": true
+        },
+        {
+          "id": "detected",
+          "kind": "stamp",
+          "at": "air",
+          "x": 8.54,
+          "y": 5.08,
+          "w": 3.48,
+          "h": 1.08,
+          "text": "detected",
+          "tone": "ok"
+        }
+      ],
+      "actions": [
+        {
+          "do": "pulse",
+          "at": "counted",
+          "target": [
+            "river"
+          ]
+        },
+        {
+          "do": "pulse",
+          "at": "air",
+          "target": [
+            "air"
+          ]
+        }
+      ]
+    }
+  ]
+}

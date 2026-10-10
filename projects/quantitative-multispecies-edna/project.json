@@ -1,0 +1,26 @@
+{
+  "repo": "gledguri/quantitative-multispecies-edna",
+  "meta": {
+    "owner": "gledguri",
+    "repo": "quantitative-multispecies-edna",
+    "url": "https://github.com/gledguri/quantitative-multispecies-edna",
+    "description": "",
+    "stars": 0,
+    "language": "R"
+  },
+  "voice": {
+    "provider": "original"
+  },
+  "brand": {
+    "chip": true,
+    "chipText": "",
+    "glyph": "repo",
+    "endLink": "",
+    "signoff": ""
+  },
+  "captions": true,
+  "render": {
+    "fps": 30,
+    "height": 1080
+  }
+}

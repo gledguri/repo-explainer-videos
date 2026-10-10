@@ -1,0 +1,11 @@
+node_modules/
+vendor/
+.DS_Store
+
+# Per-project generated / large files (regenerate with `npm run vid -- fetch|voice|render`)
+projects/*/out/
+projects/*/source/*.mp3
+projects/*/source/*.mp4
+projects/*/source/images/
+projects/*/voice.mp3
+projects/*/.repo/
