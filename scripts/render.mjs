@@ -106,7 +106,7 @@ export async function stills(dir, { beats: only, format = "landscape" } = {}) {
     for (const i of wanted) {
       const b = timing.beats[i];
       const next = timing.beats[i + 1];
-      const t = Math.max(b.start, Math.min(b.end + 0.3, (next?.start ?? b.end + 1) - 0.05));
+      const t = Math.max(b.start, Math.min(b.end + 0.3, (next?.start ?? b.end + 1) - 0.15));
       await stage.seek(t);
       const f = join(outDir, `beat-${String(i).padStart(2, "0")}.jpg`);
       await stage.page.screenshot({ type: "jpeg", quality: 85, path: f });
